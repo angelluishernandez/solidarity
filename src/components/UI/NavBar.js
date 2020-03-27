@@ -1,53 +1,38 @@
 import React from "react";
-import {
-	AppBar,
-	Toolbar,
-	Typography,
-	Button,
-	IconButton,
-} from "@material-ui/core";
-import { teal } from "@material-ui/core/colors";
-import { makeStyles, fade } from "@material-ui/core/styles";
-import MenuIcon from "@material-ui/icons/Menu";
+import { Button } from "@material-ui/core";
+import { indigo, red } from "@material-ui/core/colors";
+import { makeStyles } from "@material-ui/core/styles";
+import { Navbar } from "react-bootstrap";
 
 const styles = makeStyles(theme => ({
 	root: {
 		flexGrow: 1,
-		backgroundColor: teal[400],
+		backgroundColor: indigo[400],
 	},
 	menuButton: {
 		marginRight: theme.spacing(2),
+		background: red[200],
 	},
 	title: {
 		flexGrow: 1,
 	},
 	loginButton: {
-		backgroundColor: teal[800],
+		backgroundColor: indigo[800],
 	},
 }));
 
-const NavBar = () => {
+const NavBarComponent = () => {
 	const classes = styles();
 	return (
-		<AppBar position="static" className={classes.root}>
-			<Toolbar>
-				<IconButton
-					edge="start"
-					className={classes.menuButton}
-					color="inherit"
-					aria-label="menu"
-				>
-					<MenuIcon />
-				</IconButton>
-				<Typography variant="h6" className={classes.title}>
-					Solidarity
-				</Typography>
-				<Button color="inherit" variant="outlined">
-					Login
-				</Button>
-			</Toolbar>
-		</AppBar>
+		<Navbar  variant="dark" expand="md" sticky="top" id="navbar">
+			<Navbar.Text id="navbar__header">
+				Solidarity
+			</Navbar.Text>
+			<Button className={classes.menuButton} variant="outlined">
+				Login
+			</Button>
+		</Navbar>
 	);
 };
 
-export default NavBar;
+export default NavBarComponent;
