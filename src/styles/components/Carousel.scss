@@ -6,7 +6,8 @@
 }
 
 .carousel-item__img{
-  object-fit: fill;
+  overflow: hidden;
+  object-fit: cover;
   max-height: 30vh;
 
 }

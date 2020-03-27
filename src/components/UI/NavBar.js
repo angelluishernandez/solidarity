@@ -10,8 +10,8 @@ const styles = makeStyles(theme => ({
 		backgroundColor: indigo[400],
 	},
 	menuButton: {
-		marginRight: theme.spacing(2),
-		background: red[200],
+		border: "2px solid #b26046", 
+		fontFamily: "'Karla', sans-serif", 
 	},
 	title: {
 		flexGrow: 1,
