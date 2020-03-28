@@ -24,15 +24,20 @@ const styles = makeStyles(theme => ({
 const NavBarComponent = () => {
 	const classes = styles();
 	return (
-		<Navbar  variant="dark" expand="md" sticky="top" id="navbar">
+		<Navbar  bg="light" expand="md" sticky="top" id="navbar">
 			<Navbar.Text id="navbar__header">
-				Solidarity
+				<img src={require("/home/angel/MyProjects/solidatiry-front/src/images/logo_transparent.png")} alt="..." className="logo"></img>
 			</Navbar.Text>
 			<Button className={classes.menuButton} variant="outlined">
 				Login
 			</Button>
 		</Navbar>
-	);
+
+
+
+
+		);
+
 };
 
 export default NavBarComponent;

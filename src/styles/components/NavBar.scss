@@ -1,13 +1,19 @@
 
+.logo{
+  width: 150px;
+}
+
 .navbar{
+  font-family: $font-header;
   display: flex;
   justify-content: space-around;
-  background: $primary;
-  border-top: 10px solid $primary-dark
-
-
+  // background: $primary;
+  border-bottom: 5px solid $primary-dark
 
 }
+
+
+
 
 
 #navbar__header{

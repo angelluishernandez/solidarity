@@ -7,8 +7,61 @@ function App() {
 	return (
 		<div className="App m-0">
 			<NavBar />
-			<GridLayout />
-			<br />
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+<div><h1>Hola</h1></div>		
+v
+			{/* <GridLayout /> */}
 		</div>
 	);
 }
