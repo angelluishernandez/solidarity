@@ -12,18 +12,25 @@
 
 }
 
-
-
-
-
-#navbar__header{
+.navbar__header{
   font-family: $font-header;
   font-weight: $font-header-weight;
   color: black;
   font-size: 2rem;
 
+}
 
+.navbar__controls{
+
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: $font-header;
+font-weight: $font-header-weight;
 }
 
 
+.navbar__Link{
 
+    text-decoration: none;
+}

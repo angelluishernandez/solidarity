@@ -1,18 +1,16 @@
 import React from "react";
-import { Button } from "@material-ui/core";
-import { indigo, red } from "@material-ui/core/colors";
+import { indigo } from "@material-ui/core/colors";
 import { makeStyles } from "@material-ui/core/styles";
 import { Navbar } from "react-bootstrap";
+import CustomButton from "./CustomButton";
+import { Link, NavLink } from "react-router-dom";
 
 const styles = makeStyles(theme => ({
 	root: {
 		flexGrow: 1,
 		backgroundColor: indigo[400],
 	},
-	menuButton: {
-		border: "2px solid #b26046", 
-		fontFamily: "'Karla', sans-serif", 
-	},
+
 	title: {
 		flexGrow: 1,
 	},
@@ -22,22 +20,30 @@ const styles = makeStyles(theme => ({
 }));
 
 const NavBarComponent = () => {
-	const classes = styles();
 	return (
-		<Navbar  bg="light" expand="md" sticky="top" id="navbar">
-			<Navbar.Text id="navbar__header">
-				<img src={require("/home/angel/MyProjects/solidatiry-front/src/images/logo_transparent.png")} alt="..." className="logo"></img>
+		<Navbar bg="light" expand="md" sticky="top" id="navbar">
+			<Navbar.Text className="navbar__header">
+				<Link to="/">
+					<img
+						src={require("/home/angel/MyProjects/solidatiry-front/src/images/logo_transparent.png")}
+						alt="..."
+						className="logo"
+					></img>
+				</Link>
 			</Navbar.Text>
-			<Button className={classes.menuButton} variant="outlined">
-				Login
-			</Button>
+			<div className="navbar__controls">
+				<Link
+					to="/projects/add-project"
+					className="navbar__Link"
+					activeStyle={{ textDecoration: "none", color: "black" }}
+				>
+					{" "}
+					<h6 className="pt-2 pr-5">CREATE A NEW PROJECT</h6>
+				</Link>
+				<CustomButton text={"Login"} style={{ background: "black" }} />
+			</div>
 		</Navbar>
-
-
-
-
-		);
-
+	);
 };
 
 export default NavBarComponent;

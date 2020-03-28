@@ -6,6 +6,7 @@ import { Carousel } from "react-bootstrap";
 import { Jumbotron } from "react-bootstrap";
 import CarouselComponent from "./Carousel";
 import BottomNavBar from "./BottomNavBar";
+import CustomButton from "./CustomButton";
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -15,10 +16,6 @@ const useStyles = makeStyles(theme => ({
 		padding: theme.spacing(2),
 		textAlign: "center",
 		color: theme.palette.text.secondary,
-	},
-	button:{
-		border: "2px solid #b26046", 
-		fontFamily: "'Karla', sans-serif", 
 	}
 }));
 
@@ -42,9 +39,7 @@ const GridLayout = () => {
 						negroorl. Jarl la caidita de la pradera a gramenawer.{" "}
 					</p>
 
-					<Button className={classes.button}>
-						<b>Check them out</b>
-					</Button>
+				<CustomButton text="Check them out" />
 				</Jumbotron>
 				{/* </Grid>
 					<Grid item xs={12}> */}
