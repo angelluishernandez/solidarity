@@ -1,6 +1,8 @@
 .App {
   text-align: center;
-  background: black
+  background-color: $background; 
+  font-family: $font-header;
+  height:100vh; 
 }
 
 .App-logo {
