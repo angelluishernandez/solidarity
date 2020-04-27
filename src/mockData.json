@@ -1,18 +1,27 @@
 [
-  {
-      "imageUrl": "https://saposyprincesas.elmundo.es/wp-content/uploads/2018/11/educar-en-solidaridad.jpg",
-      "label": "First slide label", 
-      "text": "Nulla vitae elit libero, a pharetra augue mollis interdum."
-  }, 
-  {
-    "imageUrl": "https://marketingweek.imgix.net/content/uploads/2019/01/17150631/hands-solidarity-1240.jpg",
-    "label": "Second slide label", 
-    "text": "Nulla vitae elit libero, a pharetra augue mollis interdum."
-}, 
-{
-  "imageUrl": "https://www.tolingo.com/fileadmin/_processed_/7/4/xcsm_tolingo_Team_59c78abcde.jpg.pagespeed.ic.JcZbMeZMwt.jpg",
-  "label": "Second slide label", 
-  "text": "Nulla vitae elit libero, a pharetra augue mollis interdum."
-}
-
+	{
+		"imageUrl": "https://saposyprincesas.elmundo.es/wp-content/uploads/2018/11/educar-en-solidaridad.jpg",
+		"label": "First slide label",
+		"text": "Nulla vitae elit libero, a pharetra augue mollis interdum."
+	},
+	{
+		"imageUrl": "https://marketingweek.imgix.net/content/uploads/2019/01/17150631/hands-solidarity-1240.jpg",
+		"label": "Second slide label",
+		"text": "Nulla vitae elit libero, a pharetra augue mollis interdum."
+	},
+	{
+		"imageUrl": "https://www.tolingo.com/fileadmin/_processed_/7/4/xcsm_tolingo_Team_59c78abcde.jpg.pagespeed.ic.JcZbMeZMwt.jpg",
+		"label": "Second slide label",
+		"text": "Nulla vitae elit libero, a pharetra augue mollis interdum."
+	},
+	{
+		"imageUrl": "https://www.tolingo.com/fileadmin/_processed_/7/4/xcsm_tolingo_Team_59c78abcde.jpg.pagespeed.ic.JcZbMeZMwt.jpg",
+		"label": "Second slide label",
+		"text": "Nulla vitae elit libero, a pharetra augue mollis interdum."
+	},
+	{
+		"imageUrl": "https://www.tolingo.com/fileadmin/_processed_/7/4/xcsm_tolingo_Team_59c78abcde.jpg.pagespeed.ic.JcZbMeZMwt.jpg",
+		"label": "Second slide label",
+		"text": "Nulla vitae elit libero, a pharetra augue mollis interdum."
+	}
 ]

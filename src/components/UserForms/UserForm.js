@@ -1,22 +1,9 @@
-import React from "react"
+import React from "react";
 
-export default class UserForm extends React.Component{
-  state={
+export default class UserForm extends React.Component {
+	state = {};
 
-  }
-
-  render(){
-    return(
-      <div>
-        <fieldset>
-          
-        </fieldset>
-
-      </div>
-    )
-
-  }
-
-
+	render() {
+		return <div>y</div>;
+	}
 }
-

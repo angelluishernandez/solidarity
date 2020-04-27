@@ -6,26 +6,27 @@ import mockData from "../../mockData.json";
 const CarouselComponent = () => {
 	console.log(mockData);
 	return (
-	
-			<Carousel className="w-100 mh-50 carousel" keyboard={true} pause="hover">
-				{mockData.map((item, index) => {
-					return (
-						<Carousel.Item key={index} className="h-50" >
-							<img
-								className="d-block w-100 h-50 carousel-item__img"
-								src={item.imageUrl}
-								alt={item.label}
-								
-							/>
-							<Carousel.Caption>
-								<h3>{item.label}</h3>
-								<p>{item.text}</p>
-							</Carousel.Caption>
-						</Carousel.Item>
-					);
-				})}
-			</Carousel>
-	
+		<div className="container">
+			<div className="row justify-content-center ">
+				{mockData.map((item, index) => (
+					<div
+						className=" col-sm-5 col-md-5 card"
+						key={index}
+						style={{
+							backgroundImage: `url(${item.imageUrl})`,
+						}}
+					>
+						<div className="card-text info d-flex ">
+							<h3>{item.label}</h3>
+							<p className="info-text">{item.text}</p>
+							<a href="" className="project-link btn">
+								Go to project
+							</a>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
 	);
 };
 

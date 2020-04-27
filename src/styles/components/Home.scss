@@ -1,7 +1,16 @@
+.container{
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+
 .jumbotron{
   color: #ffffff; 
-  background: #ff8a65
-
+  background: #ff8a65; 
+  height: 100%; 
+  margin: 0 auto; 
 
 
 }

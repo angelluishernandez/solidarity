@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useReducer } from "react";
 import moment from "moment";
 import "react-dates/initialize";
 import { Form, Row, Col } from "react-bootstrap";
@@ -7,128 +7,127 @@ import { SingleDatePicker } from "react-dates";
 import "react-dates/lib/css/_datepicker.css";
 import { Button } from "@material-ui/core";
 
-export default class ProjectForm extends React.Component {
-	state = {
-		projects: [],
-		data: {
-			title: "",
-			category: "",
-			image: "",
-			description: "",
-			goal: 0,
-			goalItem: "",
-			deadline: "",
-		},
-		createdAt: "",
-		focused: "",
+const initialState = {
+	title: "",
+	category: "",
+	image: "",
+	description: "",
+	goal: 0,
+	goalItem: "",
+	deadline: "",
+};
+
+const reducer = (state, { field, value }) => {
+	return {
+		...state,
+		[field]: value,
+	};
+};
+
+const ProjectForm = () => {
+	const [state, dispatch] = useReducer(reducer, initialState);
+	const [focused, setFocused] = useState("");
+	const [createdAt, setCreatedAt] = useState("");
+	const [projects, setProjects] = useState([]);
+
+	const handleChange = (e) => {
+		dispatch({ field: e.target.name, value: e.target.value });
 	};
 
-	handleChange = e => {
-		const { value, name } = e.target;
-		this.setState({
-			...this.state,
-			data: {
-				...this.state.data, 
-				[name]: value,
-			},
-
-
-		});
-
-		console.log(this.state)
-	};
-
-	handleSubmit = e => {
+	const handleSubmit = (e) => {
 		e.preventDefault();
 	};
 
-	onFocusChange = ({focused}) =>{
-		this.setState({focused})
-	}
+	const onFocusChange = ({ focused }) => {
+		setFocused({ focused });
+	};
 
-	onDateChange = date =>{
-		if(date){
-			this.setState({
-				createdAt: date
-			})
+	const onDateChange = (date) => {
+		if (date) {
+			setCreatedAt(date);
 		}
-	}
-	render() {
-		return (
-			<div className="ProjectForm">
-				<form onSubmit={this.handleSubmit} className="project-form">
+	};
+
+	return (
+		<div className="ProjectForm">
+			<div className="projectform-wrapper">
+				<form onSubmit={handleSubmit} className="project-form">
 					<h3 className="mt-3 ProjectForm__header">Create a new project</h3>
-					<input
-						className="project-form__input"
-						type="text"
-						placeholder="title"
-						value={this.state.data.title}
-						onChange={this.handleChange}
-						name="title"
-					/>
-					<input
-						className="project-form__input"
-						type="text"
-						placeholder="category"
-						value={this.state.data.category}
-						onChange={this.handleChange}
-						name="category"
-					/>
-					<textarea
-						className="project-form__input"
-						type="text"
-						placeholder="description"
-						value={this.state.data.description}
-						onChange={this.handleChange}
-						name="description"
-					/>
-					<input
-						className="project-form__input"
-						type="number"
-						placeholder="goal"
-						value={this.state.data.goal}
-						onChange={this.handleChange}
-						name="goal"
-					/>
-					<input
-						className="project-form__input"
-						type="text"
-						placeholder="goalItem"
-						value={this.state.data.goalItem}
-						onChange={this.handleChange}
-						name="goalItem"
-					/>
-					<SingleDatePicker
-						date={this.state.createdAt}
-						onDateChange={this.onDateChange}
-						focused={this.state.focused}
-						onFocusChange={this.onFocusChange}
-						numberOfMonths={2}
-						isOutsideRange={() => false}
-					/>
+					<div className="input-container">
+						<span className="input-label">Your project name</span>
+						<input
+							className="project-form__input"
+							type="text"
+							placeholder="title"
+							value={state.title}
+							onChange={handleChange}
+							name="title"
+						/>
+					</div>
+					<div className="input-container">
+						<span className="input-label">Category</span>
+						<input
+							className="project-form__input"
+							type="text"
+							placeholder="category"
+							value={state.category}
+							onChange={handleChange}
+							name="category"
+						/>
+					</div>
+					<div className="input-container">
+						<span className="input-label">Description</span>
+
+						<textarea
+							className="project-form__input"
+							type="text"
+							placeholder="description"
+							value={state.description}
+							onChange={handleChange}
+							name="description"
+						/>
+					</div>
+					<div className="input-container">
+						<span className="input-label">Goal</span>
+						<input
+							className="project-form__input"
+							type="number"
+							placeholder="goal"
+							value={state.goal}
+							onChange={handleChange}
+							name="goal"
+						/>
+					</div>
+					<div className="input-container">
+						<span className="input-label">Goal item</span>
+
+						<input
+							className="project-form__input"
+							type="text"
+							placeholder="goalItem"
+							value={state.goalItem}
+							onChange={handleChange}
+							name="goalItem"
+						/>
+					</div>
+					<div className="input-container">
+						<span className="input-label">Select a deadline</span>
+						<SingleDatePicker
+							date={state.createdAt}
+							onDateChange={onDateChange}
+							focused={focused}
+							onFocusChange={onFocusChange}
+							numberOfMonths={2}
+							isOutsideRange={() => false}
+						/>
+					</div>
 					<button type="submit" className="project-form__button">
 						Create Project
 					</button>
 				</form>
 			</div>
-		);
-	}
-}
+		</div>
+	);
+};
 
-/////////////////////////7
-//  <div>
-// 			<Form>
-// 				<Form.Row>
-// 					<Form.Group as={Col} md="4" controlId="validation1">
-// 						<Form.Label>Project title</Form.Label>
-// 						<Form.Control
-// 							required
-// 							type="text"
-// 							placeholder="Project title..."
-// 							name="title"
-// 						/>
-// 						<Form.Control.Feedback>Nice!</Form.Control.Feedback>
-// 					</Form.Group>
-// 				</Form.Row>
-// 			</Form>
-// 		</div>
+export default ProjectForm;

@@ -1,56 +1,60 @@
+::-webkit-input-placeholder{
+  color: transparent
+}
+
 .ProjectForm{
-  height: 80vh;
-  width: 50%;
-  background-color:white;
-  margin: 0 auto;
-  font-size: 16px;
-  border: 1px solid lighten(grey, 20%);
-  margin-top: 10px
-
-}
-
-@media only screen and (max-width: 450px) {.ProjectForm{
-  width: 100%;
-}}
-
-@media only screen and (max-width: 768px) {.ProjectForm{
-  width: 75%;
-}}
-
-@media only screen and (max-width: 992px) {.ProjectForm{
-  width: 65%;
-}}
-
-@media only screen and (max-width: 1200px) {.ProjectForm{
-  width: 60%;
-}}
-.ProjectForm__container{
-  // background-color: red;
-}
-
-.ProjectForm__header{
-  text-align: left;
-}
-.project-form{
-
   display: flex;
-  flex-direction: column;
-  margin: 15px;
+  flex-wrap: wrap;
   justify-content: center;
-  // background-color: red;
+  align-items: center;
+  padding: 15px;
+
+}
 
 
+.projectform-wrapper{
+  width: 500px;
+  background: #fff; 
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 30px
+}
+
+.ProjectForm form{
+  display: block;
+}
+
+.ProjectForm textarea{
+  max-height: 150px;
+}
+
+.input-container{
+  width: 100%;
+  border-bottom: 2px solid #d9d9d9;
+  padding-bottom: 13px;
+  margin-bottom: 27px; 
+  position: relative;
+}
+
+.input-label{
+  color: #666; 
+  line-height: 1.5;
+  padding-left: 5px
 }
 
 .project-form__input{
+  display: block; 
+  width: 100%; 
+  background: 0 0;
+  color: #333; 
+  line-height: 1.2; 
+  padding: 0 5px;
+  outline: none;
+  border: none;
+}
 
-  margin: 15px 30px ;
-  padding: 15px;
-  &:focus{
-    border: 1px solid $primary;
-    color: $primary;
-  }
-
+.project-form__input:focus{
+  border-bottom: 2px solid $primary;
 }
 
 .project-form__button{
@@ -60,13 +64,76 @@
   padding: 15px;
   color: white;
   font-size: $font-size-m;
-
-    transition: all 0.25s ease-in-out !important
+  transition: all 0.25s ease-in-out !important
 
 
 
 }
+
 .project-form__button:hover{
   margin: 10px 40px;
   background: darken($primary, 15%)
 }
+
+
+
+
+// .ProjectForm{
+//   height: 70vh;
+//   width: 320px;
+//   margin: 0 auto;
+//   font-size: 16px;
+
+//   margin-top: 10px
+
+// }
+
+// @media only screen and (max-width: 450px) {.ProjectForm{
+//   width: 100%;
+// }}
+
+// @media only screen and (max-width: 768px) {.ProjectForm{
+//   width: 75%;
+// }}
+
+// @media only screen and (max-width: 992px) {.ProjectForm{
+//   width: 65%;
+// }}
+
+// @media only screen and (max-width: 1200px) {.ProjectForm{
+//   width: 60%;
+// }}
+// .ProjectForm__container{
+//   // background-color: red;
+// }
+
+
+// .ProjectForm__header{
+//   text-align: left;
+// }
+// .project-form{
+
+//   display: flex;
+//   flex-direction: column;
+//   margin: 15px;
+//   justify-content: center;
+//   // background-color: red;
+
+
+// }
+
+// .project-form__input{
+//   height: 15px;
+//   max-height: 100px;
+//   margin: 15px 30px ;
+//   padding: 15px;
+//   &:focus{
+//     border: 1px solid $primary;
+//     color: $primary;
+//   }
+//   box-sizing: border-box;
+//   border: 1px solid #555;
+
+// }
+
+

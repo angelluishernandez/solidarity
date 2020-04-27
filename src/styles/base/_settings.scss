@@ -1,10 +1,10 @@
 // Fonts
 
-$font-header: 'Karla', sans-serif;
+$font-header: 'Work Sans', sans-serif;
 $font-header-weight: 400; 
 
-$font-body: 'Karla', sans-serif;
-$font-body-weight-m:400; 
+$font-body: 'Open Sans', sans-serif;
+$font-body-weight-m:700; 
 $font-body-weight-l: 700; 
  
 
@@ -14,10 +14,14 @@ $font-body-weight-l: 700;
     //Background
 
     $background: #F7F7F6; 
+    $bg-color: #ECEFF1; 
+    $hl-color: #2196F3;
+    $muted-color: mix(white, $bg-color, 70%);
 
     // Primary color
 
     $primary: #ff8a65; 
+    $primary-transparent: rgba(#ff8a65, 0.6);
     $primary-dark: #b26046; 
     $primary-light: #ffa183; 
 
@@ -30,4 +34,13 @@ $font-body-weight-l: 700;
 
 // Font Sizes
 
-    $font-size-m: 18px
+    $font-size-m: 18px; 
+
+// Measures
+
+    $width: 320px;
+
+// Trans Times
+    
+    $trans-time: 300ms;
+    

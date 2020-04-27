@@ -1,19 +1,22 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
 	button: {
 		border: "2px solid #b26046",
-		fontFamily: "'Karla', sans-serif",
+		fontFamily: "'Work Sans', sans-serif",
 	},
 }));
-const CustomButton = ({ text }) => {
+const CustomButton = ({ text, path }) => {
 	const classes = useStyles();
 
 	return (
 		<Button className={classes.button}>
-			<b>{text}</b>
+			<Link to={path}>
+				<b>{text}</b>
+			</Link>
 		</Button>
 	);
 };

@@ -1,14 +1,13 @@
 import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Button } from "@material-ui/core";
-import { Carousel } from "react-bootstrap";
+
 import { Jumbotron } from "react-bootstrap";
 import CarouselComponent from "./Carousel";
-import BottomNavBar from "./BottomNavBar";
+import BottomNavBar from "./NavBar/BottomNavBar";
 import CustomButton from "./CustomButton";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
 	root: {
 		flexGrow: 1,
 	},
@@ -16,37 +15,53 @@ const useStyles = makeStyles(theme => ({
 		padding: theme.spacing(2),
 		textAlign: "center",
 		color: theme.palette.text.secondary,
-	}
+	},
 }));
 
 const GridLayout = () => {
 	const classes = useStyles();
 	return (
-		<div className={classes.root}>
-			<div>
-				<CarouselComponent />
-			</div>
-			<div>
-				{/* <Grid container spacing={3} className="">
-					<Grid item xs={12}> */}
-				<Jumbotron fluid className="about">
-					<h3>What is Solidarity?</h3>
-					<p>
-						Lorem fistrum a wan al ataquerl está la cosa muy malar. Caballo
-						blanco caballo negroorl amatomaa a peich llevame al sircoo ahorarr
-						ese pedazo de torpedo va usté muy cargadoo quietooor. A wan hasta
-						luego Lucas por la gloria de mi madre caballo blanco caballo
-						negroorl. Jarl la caidita de la pradera a gramenawer.{" "}
-					</p>
+		<div className="container ">
+			<div className="row">
+				<div className="col-m-5">
+					<div className={classes.root}>
+						<div className="row">
+							<div className="col-md-7">
+								<div>
+									<CarouselComponent />
+								</div>
+							</div>
 
-				<CustomButton text="Check them out" />
-				</Jumbotron>
-				{/* </Grid>
+							<div className="col-md-5">
+								<Jumbotron fluid className="about p-3">
+									<h3>What is Solidarity?</h3>
+									<p>
+										Lorem fistrum a wan al ataquerl está la cosa muy malar.
+										Caballo blanco caballo negroorl amatomaa a peich llevame al
+										sircoo ahorarr ese pedazo de torpedo va usté muy cargadoo
+										quietooor. A wan hasta luego Lucas por la gloria de mi madre
+										caballo blanco caballo negroorl. Jarl la caidita de la
+										pradera a gramenawer.{" "}
+									</p>
+
+									<CustomButton text="Check them out" />
+								</Jumbotron>
+							</div>
+						</div>
+
+						<div>
+							{/* <Grid container spacing={3} className="">
 					<Grid item xs={12}> */}
 
-				<BottomNavBar/>
-				{/* </Grid>
+							{/* </Grid>
+					<Grid item xs={12}> */}
+
+							<BottomNavBar />
+							{/* </Grid>
 				</Grid> */}
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
