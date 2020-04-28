@@ -30,7 +30,6 @@
 
 .input-container{
   width: 100%;
-  border-bottom: 2px solid #d9d9d9;
   padding-bottom: 13px;
   margin-bottom: 27px; 
   position: relative;
@@ -40,6 +39,12 @@
   color: #666; 
   line-height: 1.5;
   padding-left: 5px
+}
+
+.project-form{
+  margin: 0 auto; 
+  width: 75%
+
 }
 
 .project-form__input{
@@ -75,7 +80,14 @@
   background: darken($primary, 15%)
 }
 
+.how-project{
 
+}
+
+.how-project ol{
+  text-align: center;
+  list-style-position: inside;
+}
 
 
 // .ProjectForm{

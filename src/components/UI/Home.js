@@ -6,6 +6,7 @@ import { Jumbotron } from "react-bootstrap";
 import CarouselComponent from "./Carousel";
 import BottomNavBar from "./NavBar/BottomNavBar";
 import CustomButton from "./CustomButton";
+import TopSection from "../Home/TopSection";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -25,6 +26,7 @@ const GridLayout = () => {
 			<div className="row">
 				<div className="col-m-5">
 					<div className={classes.root}>
+						<TopSection />
 						<div className="row">
 							<div className="col-md-7">
 								<div>

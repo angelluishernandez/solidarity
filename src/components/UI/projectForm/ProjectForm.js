@@ -6,6 +6,7 @@ import { Form, Row, Col } from "react-bootstrap";
 import { SingleDatePicker } from "react-dates";
 import "react-dates/lib/css/_datepicker.css";
 import { Button } from "@material-ui/core";
+import FormSide from "./FormSide";
 
 const initialState = {
 	title: "",
@@ -49,8 +50,15 @@ const ProjectForm = () => {
 	};
 
 	return (
-		<div className="ProjectForm">
-			<div className="projectform-wrapper">
+		<div className="ProjectForm container">
+			<div className="col-md-12">
+				{" "}
+				<h3>Create your own project</h3>
+			</div>{" "}
+			<div className="col-md-6">
+				<FormSide />
+			</div>
+			<div className="projectform-wrapper col-md-6">
 				<form onSubmit={handleSubmit} className="project-form">
 					<h3 className="mt-3 ProjectForm__header">Create a new project</h3>
 					<div className="input-container">
@@ -62,18 +70,17 @@ const ProjectForm = () => {
 							value={state.title}
 							onChange={handleChange}
 							name="title"
+							autoComplete="off"
 						/>
 					</div>
 					<div className="input-container">
 						<span className="input-label">Category</span>
-						<input
-							className="project-form__input"
-							type="text"
-							placeholder="category"
-							value={state.category}
-							onChange={handleChange}
-							name="category"
-						/>
+						<select name="" id="">
+							<option value="">Health</option>
+							<option value="">Food</option>
+							<option value="">Equipment</option>
+							<option value="">Other</option>
+						</select>
 					</div>
 					<div className="input-container">
 						<span className="input-label">Description</span>
